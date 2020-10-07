@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.mendix.com/widget/1.0/" id="DemoWidget.DemoWidget" needsEntityContext="false" pluginWidget="true">
+	<name>DemoWidget</name>
+	<description />
+	<helpUrl>https://docs.mendix.com/apidocs-mxsdk/apidocs/client-api</helpUrl>
+	<icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATlJREFUeNrUk7+Kg0AQxj83GpCkSSchnE9gp/gSuQe4EEiR5h7gsArW9xbWwVYxzyEoFlYHOYjBKmAhl+ztLCiXlLG6gXG++fMbllUVzjmGGMNAG7xAnU6nb9fr9eUZeDQafammac6jKPp8bM5mMwRBANu2YVlWrxeLRT+zXC4/mCj8qKoK8rquEYahjJfLBdvtFmmaoiiKXp9OJ3TzxLLJZHLTNA1VVUGcBE3TyEg56c1mgyzLUJZlr8/nM4ghlhbw8XiM/X4vgc4pp3rbtlitVsjz/E5Tj1im6/qNkvV6LUHf92WknOrikhHHMVzXvdPUI1YVD07HYYxJkDRFykUPSZLAcRx5eZ02DENeIrHwPO9dvEb+6GSHw4Efj8c7/XeGWGW3270qijJ/5jsQe7+V//8vDF7wK8AAyt3H2nMrY70AAAAASUVORK5CYII=</icon>
+	<properties>
+		<property key="tryMe" type="boolean" required="true" defaultValue="false">
+			<caption>Switch</caption>
+			<category>1 - General</category>
+			<description>Toggle</description>
+		</property>
+		<property key="subObjectsDemo" type="boolean" required="true" defaultValue="false">
+			<caption>Sub Objects demo</caption>
+			<category>1 - General</category>
+			<description>Show some sub-objects stuff</description>
+		</property>
+		<property key="previewDemo" type="boolean" required="true" defaultValue="false">
+			<caption>Preview demo</caption>
+			<category>1 - General</category>
+			<description>Show some preview stuff</description>
+		</property>
+		<property key="setCustomCaptions" type="boolean" required="true" defaultValue="false">
+			<caption>Captionagic</caption>
+			<category>1 - General</category>
+			<description>Try out sub-object caption logic</description>
+		</property>
+		<property key="setObjectHeaders" type="boolean" required="true" defaultValue="false">
+			<caption>Captionagic</caption>
+			<category>1 - General</category>
+			<description>Set custom headers on object grid</description>
+		</property>
+		<property key="orientation" type="enumeration" required="true" defaultValue="horizontal">
+			<caption>Orientation</caption>
+			<category>2 - Preview</category>
+			<description>Sets image orientation</description>
+			<enumerationValues>
+				<enumerationValue key="vertical">vertical</enumerationValue>
+				<enumerationValue key="horizontal">horizontal</enumerationValue>
+			</enumerationValues>
+		</property>
+		<property key="width" type="integer" required="true" defaultValue="-1">
+			<caption>Width</caption>
+			<category>2 - Preview</category>
+			<description>Width of the image</description>
+		</property>
+
+		<property key="width2" type="integer" required="true" defaultValue="-1">
+			<caption>Width2</caption>
+			<category>2 - Preview</category>
+			<description>Width of the image 2</description>
+		</property>
+		<property key="height" type="integer" required="true" defaultValue="-1">
+			<caption>Height</caption>
+			<category>2 - Preview</category>
+			<description>Height of the image</description>
+		</property>
+		<property key="height2" type="integer" required="true" defaultValue="-1">
+			<caption>Height2</caption>
+			<category>2 - Preview</category>
+			<description>Height of the image 2</description>
+		</property>
+		<property key="randomString1" type="string" required="false">
+			<caption>Random string 1</caption>
+			<category>3 - Other stuff</category>
+			<description>I'm a property!</description>
+		</property>
+		<property key="randomString2" type="string" required="false">
+			<caption>Random string 2</caption>
+			<category>3 - Other stuff</category>
+			<description>I'm a property!</description>
+		</property>
+		<property key="randomString3" type="string" required="false">
+			<caption>Random string 3</caption>
+			<category>3 - Other stuff</category>
+			<description>I'm a property!</description>
+		</property>
+		<property key="alttab" type="action" required="false">
+			<caption>ActionReaction</caption>
+			<category>3 - Other stuff</category>
+			<description>I'm an action man!</description>
+		</property>
+		<property key="colour" type="enumeration" defaultValue="red">
+			<caption>colour</caption>
+			<category>3 - Other stuff</category>
+			<description>My enumeration setting</description>
+			<enumerationValues>
+				<enumerationValue key="red">Red</enumerationValue>
+				<enumerationValue key="green">Green</enumerationValue>
+				<enumerationValue key="blue">Blue</enumerationValue>
+				<enumerationValue key="yellow">Yellow</enumerationValue>
+				<enumerationValue key="pink">Pink</enumerationValue>
+			</enumerationValues>
+		</property>
+		<property key="subs" type="object" isList="true">
+			<caption>Subs</caption>
+			<category>4 - Subs</category>
+			<description/>
+			<properties>
+				<propertyGroup caption="praps">
+					<property key="newSubWidget" type="widgets" required="false">
+					  <caption>newSubWidget</caption>
+					  <description></description>
+					</property>
+					<property key="subBool1" type="boolean" defaultValue="true">
+						<caption>subBool1</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool2" type="boolean" defaultValue="true">
+						<caption>subBool2</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool3" type="boolean" defaultValue="true">
+						<caption>subBool3</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool4" type="boolean" defaultValue="true">
+						<caption>subBool4</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subAction" type="action">
+					  <caption>Action</caption>
+					  <description></description>
+					</property>
+					<property key="subContent" type="widgets" required="false" dataSource="subDatasource">
+					  <caption>Content</caption>
+					  <description></description>
+					</property>
+					<property key="subDatasource" type="datasource" required="true" isList="true">
+					  <caption>Data Source</caption>
+					  <description></description>
+					</property>
+					<property key="subImage" type="image" required="false">
+					  <caption>Image</caption>
+					  <description></description>
+					</property>
+				</propertyGroup>
+				<propertyGroup caption="praps2">
+					<property key="subBool5" type="boolean" defaultValue="true">
+						<caption>subBool5</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool6" type="boolean" defaultValue="true">
+						<caption>subBool6</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool7" type="boolean" defaultValue="true">
+						<caption>subBool7</caption>
+						<description>My boolean setting</description>
+					</property>
+					<property key="subBool8" type="boolean" defaultValue="true">
+						<caption>subBool8</caption>
+						<description>My boolean setting</description>
+					</property>
+				</propertyGroup>
+			</properties>
+		</property>
+		<property key="prevDontReturn" type="boolean" required="true" defaultValue="false">
+			<caption>Preview is empty</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevUseCustomConf" type="boolean" required="true" defaultValue="false">
+			<caption>Use custom preview configuration</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevCustomConf" type="string" required="false">
+			<caption>Custom preview configuration</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevUseContainment" type="boolean" required="true" defaultValue="false">
+			<caption>Use containment</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevUseSelectableSubObjects" type="boolean" required="true" defaultValue="false">
+			<caption>Use selectable sub objects preview configuration</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevContainment" type="widgets" required="false">
+			<caption>Containment</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="prevContainment2" type="widgets" required="false">
+			<caption>Containment2</caption>
+			<category>2 - Preview</category>
+			<description />
+		</property>
+		<property key="customProperties" type="string" required="false">
+			<caption>Custom properties</caption>
+			<category>3 - Other stuff</category>
+			<description />
+		</property>
+		<property key="subsWithWidgets" type="object" isList="true">
+			<caption>Sub objects with widgets</caption>
+			<category>5 - SubWidgets</category>
+			<description/>
+			<properties>
+				<propertyGroup caption="Widgets">
+					<property key="subWidgets1" type="widgets" required="false">
+						<caption>Widgets-1</caption>
+						<description></description>
+					</property>
+					<property key="subWidgets2" type="widgets" required="false">
+						<caption>Widgets-2</caption>
+						<description></description>
+					</property>
+					<property key="subWidgets3" type="widgets" required="false">
+						<caption>Widgets-3</caption>
+						<description></description>
+					</property>
+					<property key="subWidgets4" type="widgets" required="false">
+						<caption>Widgets-4</caption>
+						<description></description>
+					</property>
+				</propertyGroup>
+			</properties>
+		</property>
+		<property key="someAttr" type="attribute" required="false">
+			<caption>Some Attribute</caption>
+			<category>6 - What</category>
+			<description />
+			<attributeTypes>
+				<attributeType name="Decimal" />
+				<attributeType name="Integer" />
+				<attributeType name="Long" />
+			</attributeTypes>
+		</property>
+		<property key="someDatasource" type="datasource" required="true" isList="true">
+			<caption>Data Source</caption>
+			<category>6 - What</category>
+			<description />
+		</property>
+	</properties>
+</widget>
